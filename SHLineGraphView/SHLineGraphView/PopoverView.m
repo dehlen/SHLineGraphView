@@ -819,11 +819,7 @@
 
 - (void)didTapButton:(UIButton *)sender
 {
-    int index = [subviewsArray indexOfObject:sender];
-    
-    if (index == NSNotFound) {
-        return;
-    }
+    int index = (int)[subviewsArray indexOfObject:sender];
     
     if (delegate && [delegate respondsToSelector:@selector(popoverView:didSelectItemAtIndex:)]) {
         [delegate popoverView:self didSelectItemAtIndex:index];
